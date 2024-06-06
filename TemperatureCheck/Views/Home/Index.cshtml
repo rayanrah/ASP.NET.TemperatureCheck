@@ -1,0 +1,30 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@model TemperatureModelMV
+
+<!DOCTYpe
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Enter Temperature</title>
+</head>
+<body>
+    <h1>Enter Your Body Temperature</h1>
+
+    @if (TempData["ErrorMessage"] != null)
+    {
+        <p>@TempData["ErrorMessage"]</p>
+    }
+
+    <form asp-controller="Doctor" asp-action="CheckTemperature" method="post">
+
+        <label asp-for="@Model.Temperature"></label>
+        <br />
+        <input asp-for="@Model.Temperature"></input>
+        <br />
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

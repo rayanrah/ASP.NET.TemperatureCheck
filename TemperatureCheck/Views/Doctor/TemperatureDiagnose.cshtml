@@ -1,0 +1,25 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+ 
+@model string
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Temperature Diagnose</title>
+</head>
+<body>
+    <h1>Temperature Diagnose</h1>
+    @if (!string.IsNullOrEmpty(Model))
+    {
+        <p>@Model</p>
+    }
+    else
+    {
+        <p>No temperature value was provided.</p>
+    }
+</body>
+</html>
