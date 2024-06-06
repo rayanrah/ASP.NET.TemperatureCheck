@@ -15,7 +15,7 @@
 
     @if (TempData["ErrorMessage"] != null)
     {
-        <p>@TempData["ErrorMessage"]</p>
+        <h3 class="ErrorText">@TempData["ErrorMessage"]</h3>
     }
 
     <form asp-controller="Doctor" asp-action="CheckTemperature" method="post">
